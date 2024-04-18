@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SparklesBackground from "@/components/about/sparklesBackground";
+import SparklesBackground from "@/components/sparkles/sparklesBackground";
+import Navbar from "@/components/navbar/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
+        <Navbar />
         <SparklesBackground />
         {children}</body>
     </html>
